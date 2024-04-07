@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  fintech-dev-db:
+    image: postgres:13
+    ports:
+      - 5434:5432
+    environment:
+      POSTGRESS_USER: postgres
+      POSTGRES_PASSWORD: 4321
+      POSTGRES_DB: fintech
+    networks:
+      - kolomove
+networks:
+  kolomove:
